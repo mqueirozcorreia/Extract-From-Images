@@ -3,14 +3,16 @@ import os
 from PIL import Image
 import sys
 
-# setting extract language
-if len(sys.argv) > 1:
-    lang = sys.argv[1]
-else:
-    lang = 'eng'
-
 # get the current directory path
 dir_path = os.getcwd()
+if len(sys.argv) > 1:
+    dir_path = sys.argv[1]
+
+# setting extract language
+lang = 'eng'
+if len(sys.argv) > 2:
+    lang = sys.argv[2]
+
 
 # get a list of all files in the directory
 files = os.listdir(dir_path)
@@ -29,8 +31,9 @@ for file in files:
 
 # loop through the list of files and print each filename
 for image_file in image_files:
-    print(image_file + " was found and we are generating .txt from it")
-    img = Image.open(image_file)
+    file_path = os.path.join(dir_path, image_file)
+    print(file_path + " was found and we are generating .txt from it")
+    img = Image.open(file_path)
     text = pytesseract.image_to_string(img, lang=lang)
     # open a file for writing
     with open(image_file + ".txt", "w") as file:
