@@ -36,9 +36,16 @@ Note that the quality of the extracted text will depend on the quality of the im
 
 # How to execute?
 
+## 1 From File
 Execute the command below to create text files from all files in the directory. 
 For path the default is current project directory, but you can use `~/Downloads`
 For lang the default is `eng` but you can use others like `por`
 ```
 python extract-text.py <path> <lang>
+```
+
+## 2 From Memory
+
+```
+python extract-text-from-memory
 ```
