@@ -7,3 +7,5 @@ def extract_text_from_image(lang, image_file, img):
     with open(image_file + ".txt", "w") as file:
         # write the text to the file
         file.write(text)
+
+    return text

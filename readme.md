@@ -26,13 +26,13 @@ Download your needed language, like portuguese:
 curl -L -O https://github.com/tesseract-ocr/tessdata/raw/main/por.traineddata
 ```
 
-Install Python wrapper, pytesseract. You can install them using pip:
-
-```
-pip install pytesseract
-```
-
 Note that the quality of the extracted text will depend on the quality of the image and the performance of the OCR engine. You may need to experiment with different settings and preprocessing techniques to get the best results.
+
+# Install requirements
+
+```
+pip install -r requirements.txt
+```
 
 # How to execute?
 
@@ -40,12 +40,15 @@ Note that the quality of the extracted text will depend on the quality of the im
 Execute the command below to create text files from all files in the directory. 
 For path the default is current project directory, but you can use `~/Downloads`
 For lang the default is `eng` but you can use others like `por`
+File are save in running directory
 ```
-python extract-text.py <path> <lang>
+python from-file.py <path> <lang>
 ```
 
 ## 2 From Memory
+If you have images in clipboard, will extract text from that
+File are save clipboard again and in the running directory as `from_memory.txt`
 
 ```
-python extract-text-from-memory
+python from-memory
 ```

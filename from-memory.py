@@ -1,5 +1,7 @@
 from PIL import ImageGrab
 import image_helper
+import pyperclip
+
 
 # Capture the screen region containing the image
 img = ImageGrab.grabclipboard()
@@ -8,4 +10,7 @@ img = ImageGrab.grabclipboard()
 if img is None:
     print("No image found in clipboard")
 else:
-    image_helper.extract_text_from_image("eng", "from_memory", img)
+    text = image_helper.extract_text_from_image("eng", "from_memory", img)
+    # Set the text to the clipboard
+    pyperclip.copy(text)
+    print("text copied to clipboard")
