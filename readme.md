@@ -19,6 +19,12 @@ If you are missing a language, go to the tessdata directory listed from the last
 ```
 cd /usr/local/share/tessdata/
 ```
+If installed with homebrew on M1, this can be in a different directory:
+```
+/opt/homebrew/Cellar/tesseract/{version}/share/tessdata
+```
+
+Notice that `/opt/homebrew/Cellar/` is the directory where homebrew install any package
 
 Download your needed language, like portuguese:
 
