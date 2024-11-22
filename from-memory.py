@@ -1,5 +1,5 @@
 from PIL import ImageGrab
-import image_helper
+import helper.image_helper as ih
 import pyperclip
 
 
@@ -10,7 +10,7 @@ img = ImageGrab.grabclipboard()
 if img is None:
     print("No image found in clipboard")
 else:
-    text = image_helper.extract_text_from_image("eng", "from_memory", img)
+    text = ih.extract_text_from_image("eng", "from_memory", img)
     # Set the text to the clipboard
     pyperclip.copy(text)
     print("text copied to clipboard")
