@@ -1,18 +1,9 @@
 import os
 from PIL import Image
-import sys
 import helper.file_helper as fh
 import helper.image_helper as ih
 
-# get the current directory path
-dir_path = os.getcwd()
-if len(sys.argv) > 1:
-    dir_path = sys.argv[1]
-
-# setting extract language
-lang = 'eng'
-if len(sys.argv) > 2:
-    lang = sys.argv[2]
+dir_path, lang = fh.get_cli_args()
 
 image_files = fh.get_image_file_names(dir_path)
 

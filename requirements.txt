@@ -1,2 +1,12 @@
-pytesseract
+# PDF parsing and layout
+PyMuPDF==1.24.9
+
+# OCR (Tesseract bindings)
+pytesseract==0.3.13
+
+# Image handling
+Pillow==10.4.0
+
+# Optional: if you want to add pdf2image support later (not needed for this version)
+# pdf2image==1.17.0
 pyperclip
