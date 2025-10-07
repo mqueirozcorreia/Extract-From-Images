@@ -162,7 +162,8 @@ cython_debug/
 # Mac Desktop Services Store
 .DS_Store
 
-# Ignoring images (source) and generated txt files
+# Ignoring sources(images, pdf) and generated txt files
+*.pdf
 *.png
 *.txt
 
